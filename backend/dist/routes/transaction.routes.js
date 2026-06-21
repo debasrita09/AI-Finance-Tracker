@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const transaction_controller_1 = require("../controllers/transaction.controller");
+const express_2 = require("@clerk/express");
+const router = (0, express_1.Router)();
+router.get("/", (0, express_2.requireAuth)(), transaction_controller_1.getTransactions);
+router.post("/", (0, express_2.requireAuth)(), transaction_controller_1.addTransaction);
+router.delete("/:id", (0, express_2.requireAuth)(), transaction_controller_1.removeTransaction);
+router.put("/:id", (0, express_2.requireAuth)(), transaction_controller_1.editTransaction);
+exports.default = router;
