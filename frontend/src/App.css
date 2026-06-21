@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-bar input {
+  flex: 1;
+}
+.ai-insights-box {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+
+  border: 1px solid #333;
+  border-radius: 12px;
+
+  background-color: #1e1e1e;
+}
+
+.ai-insights-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ai-text {
+  white-space: pre-line;
+  line-height: 1.8;
+
+  text-align: left;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.ai-button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.ai-text p {
+  margin: 12px 0;
+  text-align: left;
+}
