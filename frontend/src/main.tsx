@@ -6,6 +6,7 @@ import "./index.css";
 
 const publishableKey =
   import.meta.env.CLERK_PUBLISHABLE_KEY;
+console.log("Clerk Publishable Key:", publishableKey);
 
 if (!publishableKey) {
   throw new Error("Missing Clerk Publishable Key");
