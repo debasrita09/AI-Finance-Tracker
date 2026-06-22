@@ -45,6 +45,8 @@ function App() {
       const token = await getToken();
 
       if (!token) return;
+      console.log("User:", user?.id);
+      console.log("Token:", token);
       const data = await getTransactions(token);
 
       setTransactions(data);

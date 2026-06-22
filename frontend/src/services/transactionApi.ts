@@ -1,10 +1,16 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/transactions";
+const BASE_URL = import.meta.env.VITE_API_URL;
+
+const API_URL = `${BASE_URL}/transactions`;
+
+
 
 export async function getTransactions(
   token: string
 ) {
+  console.log("BASE_URL =", BASE_URL);
+  console.log("TOKEN =", token);
 
   const response = await axios.get(
     API_URL,
@@ -86,7 +92,7 @@ export async function getAIInsights(
   token: string
 ) {
   const response = await axios.post(
-    "http://localhost:5000/ai-insights",
+    `${BASE_URL}/ai-insights`,
     { transactions },
     {
       headers: {
